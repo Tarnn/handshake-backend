@@ -1,0 +1,9 @@
+jim:
+  first_name: "Jim"
+  last_name: "Hawkins"
+  check_in_time: "2021-02-15 19:35:00"
+
+sally:
+  first_name: "Sally"
+  last_name: "Ride"
+  check_in_time: "2021-02-18 16:39:00"
