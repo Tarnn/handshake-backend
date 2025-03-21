@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+		"name": "Handshake API",
+		"description": "Collection of API endpoints for the Handshake application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "your-secret-token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index"
+							]
+						},
+						"description": "Retrieve a list of all users"
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "your-secret-token",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/index",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"index"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": [
+								{
+									"first_name": "Jim",
+									"last_name": "Hawkins"
+								},
+								{
+									"first_name": "Sally",
+									"last_name": "Ride"
+								}
+							]
+						},
+						{
+							"name": "Error Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "your-secret-token",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/index",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"index"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": {
+								"errors": {
+									"base": ["Error fetching users"]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+} 
